@@ -11,6 +11,9 @@ except AssertionError as e:
 filename = sys.argv[1]
 
 data = pandas.read_csv(filename)
+data = data.dropna(subset=["Word_ID", "dep", "word"])  #prevents errors from being raised if there are empty rows in the dataset
+data = data.reset_index(drop=True) #create a new index without the dropped cols
+
 ids = data["Word_ID"]
 words = data["word"]
 pos_tags = data["pos"]

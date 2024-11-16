@@ -30,7 +30,12 @@ Place a csv file in the same directory as these 2 files. The csv needs to have c
 | word.1.2| sat   | VM   | 0    | 
 | word.2.1| bob   | NN   | 0    |
 
-The column headers are case-sensitive. The data in the Word_ID column can have either capital or small w, it doesn't matter. There is no restriction on the values in any of the other columns.
+
+#### Restrictions
+- Column headers are case-sensitive.
+- `dep` must contain only integers.
+- All columns except `pos` are required to have a value for each row. If not, the corresponding row will be skipped.
+
 
 ### Generating dot files
 Run `generate.py` to generate `.dot` files, providing the csv filename as command line input. 
