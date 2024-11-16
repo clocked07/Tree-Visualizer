@@ -31,6 +31,10 @@ Place a csv file in the same directory as these 2 files. The csv needs to have c
 | word.2.1| bob   | NN   | 0    |
 
 
+#### Word_ID Format
+
+`Word_ID` is formatted as `Word.sentence_number.word_index`.
+
 #### Restrictions
 - Column headers are case-sensitive.
 - `dep` must contain only integers.
