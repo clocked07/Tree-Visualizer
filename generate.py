@@ -39,7 +39,7 @@ for sent_id in sent_id_to_sentence_mapping:
     full_sentence = ""
     nRoots = 0
     try:
-        with open(f"{sent_id}.dot", "w") as f:
+        with open(f"{sent_id}.dot", "w", encoding='utf-8') as f: #encoding=utf-8 allows us to write special characters to the file
             f.write("digraph G {\nrankdir=BT;\n")
             for id in word_to_id_mapping:
                 if word_to_id_mapping[id][2] == 0:
@@ -52,5 +52,6 @@ for sent_id in sent_id_to_sentence_mapping:
 
             f.write(f"\"{full_sentence}\";\n}}")
         assert(nRoots == 1)
-    except:
+    except Exception as e:
         print("Error in file " + sent_id)
+        print(e); #for clarity on where the error is occuring
