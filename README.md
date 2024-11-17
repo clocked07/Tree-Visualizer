@@ -57,6 +57,6 @@ Run `pdf.sh` to convert each dot file in the directory into a pdf file of the sa
 bash pdf.sh
 ```
 
-# Error handling
+## Error handling
 Upon running the python script, some error messages may be printed suggesting that the sentence has an error. 
 
