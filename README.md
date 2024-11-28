@@ -15,7 +15,7 @@ This tool generates dependency trees of sentences from a structure specified in 
 `pdf.sh` needs the following:
 
 - bash 
-- graphwiz (provides the dot program) [use `apt install graphwiz` on linux]
+- graphviz (provides the dot program) [use `apt install graphviz` on linux]
 
 
 ## Usage
