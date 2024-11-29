@@ -57,6 +57,39 @@ Run `pdf.sh` to convert each dot file in the directory into a pdf file of the sa
 bash pdf.sh
 ```
 
+## Example
+
+Let's say we have the sentence मेरी अमी जान कहती थी.
+
+Our csv looks like this
+
+| Word_ID | word  | pos  | dep  |
+|---------|-------|------|------|
+Word.1.1|	मेरी|	Det|	2
+Word.1.2|	अमी	|N	|4
+Word.1.3|	जान	|Adj	|2
+Word.1.4|	कहती|	V	|5
+Word.1.5|	थी	|Aux|	0
+
+Here थी is the root so it's `dep` is 0.
+
+Our output after running `generate.py` and `pdf.sh` is:
+
+![](img/corrected-pdf.png?raw=true)
+
 ## Error handling
-Upon running the python script, some error messages may be printed suggesting that the sentence has an error. 
+Upon running the python script, some error messages may be printed suggesting that the csv file has an error. 
+
+### Incorrect rendering of special characters
+An output with "tofu boxes" like this indicates that your system's default font does not support the special characters in your text.
+
+
+![tofu box](img/error-pdf.png?raw=true)
+
+To resolve this issue, install [Noto Sans by Google](https://fonts.google.com/noto/specimen/Noto+Sans). This font supports almost every script in the world.
+
+Running the program again will give you a properly rendered pdf.
+
+![corrected pdf](img/corrected-pdf.png?raw=true)
+
 
