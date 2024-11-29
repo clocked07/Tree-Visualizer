@@ -30,6 +30,8 @@ Place a csv file in the same directory as these 2 files. The csv needs to have c
 | word.1.2| sat   | VM   | 0    | 
 | word.2.1| bob   | NN   | 0    |
 
+**`dep` of the root word must be set to 0.**
+**There can only be one root.**
 
 #### Word_ID Format
 
