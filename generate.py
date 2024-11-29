@@ -43,7 +43,11 @@ for sent_id in sent_id_to_sentence_mapping:
     nRoots = 0
     try:
         with open(f"{sent_id}.dot", "w", encoding='utf-8') as f: #encoding=utf-8 allows us to write special characters to the file
-            f.write("digraph G {\nrankdir=BT;\n")
+            f.write("digraph G {\n")
+            f.write('graph [fontname="Noto Sans, sans-serif"];\n')
+            f.write('node [fontname="Noto Sans, sans-serif"];\n')
+            f.write('edge [fontname="Noto Sans, sans-serif"];\n')
+            f.write("rankdir=BT;\n")
             for id in word_to_id_mapping:
                 if word_to_id_mapping[id][2] == 0:
                     nRoots += 1
