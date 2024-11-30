@@ -1,4 +1,4 @@
-# Tree Analyzer
+# Tree Visualizer
 
 This tool generates dependency trees of sentences from a structure specified in a csv file.
 
